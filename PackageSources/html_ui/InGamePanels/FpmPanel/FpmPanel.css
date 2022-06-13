@@ -1,0 +1,136 @@
+﻿/** This mixin makes a single line element fit exactly on the Roboto font for easier integration. */
+ingame-ui#FpmPanel {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100% !important;
+    /*width: 100% !important;*/
+    width: var(--fullPageWidth) !important;
+
+    background:0 0;
+    border:0;
+    pointer-events:none;
+    transition:none;
+}
+
+ingame-ui#FpmPanel #FpmPanelWrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#fpmpanel {
+    margin-left:var(--pageMargin);
+    text-align:center;
+    border: 2px solid #333 !important;
+    border-radius: 5px;
+    background-color: var(--backgroundColorContrastedPanel);
+    font-size: var(--fontSizeMedium);
+    padding: 10px 15px;
+    width: 40rem;
+    /*height: 8rem;*/
+    margin-top:8rem;
+    flex-grow:0;
+}
+
+.fpmgfdiv {
+    display:flex;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+}
+
+.green-text {
+    color: var(--color-green);
+}
+
+.red-text {
+    color: var(--color-red);
+}
+
+.yellow-text {
+    color: var(--color-yellow);
+}
+
+.orange-text {
+    color: var(--color-orange);
+}
+
+.cyan-text {
+    color: var(--color-cyan);
+}
+
+.blink-text {
+    animation: blinker 1s linear infinite;
+}
+
+.font-small {
+    font-size: var(--fontSizeDefault);
+}
+  
+@keyframes blinker {
+    50% {
+        opacity: 0;
+    }
+}
+
+ingame-ui#FpmPanel #MainDisplay.hidden {
+    display: none;
+}
+
+ingame-ui#FpmPanel #Footer.hidden {
+    display: none;
+}
+
+ingame-ui#FpmPanel .ingameUiContent {
+    /*border: 2px solid green !important;*/
+    display: flex !important;
+    flex-direction: column !important;
+    width: 100% !important;
+    height: 100% !important;
+    min-height: 0 !important;
+    min-width: 0 !important;
+    overflow: hidden !important;
+    align-items: stretch !important;
+    flex: 1 1 auto !important;
+}
+
+ingame-ui#FpmPanel .ingameUiWrapper {
+    /*border: 2px solid yellow !important;*/
+    display: flex !important;
+    flex-direction: column !important;
+    width: 100% !important;
+    height: 100% !important;
+    min-height: 0 !important;
+    min-width: 0 !important;
+    overflow: hidden !important;
+    align-items: stretch !important;
+    flex: 1 1 auto !important;
+}
+
+@font-face {
+    font-family: "RobotoMono-Light";
+    src: url("/Fonts/RobotoMono-Light.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+ingame-ui#FpmPanel ingame-ui-header {
+    display: none !important
+}
+
+ingame-ui#FpmPanel ingame-ui-header .title {
+    display: none !important
+}
+
+ingame-ui#FpmPanel icon-button.Reduce,
+ingame-ui#FpmPanel icon-button.Extern,
+ingame-ui#FpmPanel icon-button.Detach,
+ingame-ui#FpmPanel icon-button.Close {
+    display: none !important
+}
+
+ingame-ui#FpmPanel ui-element {
+    display: none !important
+}

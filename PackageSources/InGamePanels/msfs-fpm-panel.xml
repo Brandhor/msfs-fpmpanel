@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="Windows-1252"?>
+<SimBase.Document Type="InGamePanels" version="1,0">
+  <Filename>InGamePanel_FpmPanel.spb</Filename>
+  <InGamePanels.InGamePanelDefinition id="PANEL_FPM_PANEL" Name="Fpm" 
+    url="html_ui/ingamePanels/FpmPanel/FpmPanel.html" 
+    resizeDirections="None" minWidth="60.000" minHeight="3.000" defaultWidth="600.000" defaultHeight="30.000" defaultTop="0.000" defaultLeft="0.000"
+    icon="ICON_FPMPANEL" buttonVisible="true">
+  </InGamePanels.InGamePanelDefinition>
+</SimBase.Document>
