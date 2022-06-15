@@ -90,10 +90,10 @@ class IngamePanelFpmPanel extends TemplateElement {
             msg = "Hard Landing";
             color = "cyan-text";
         } else if(fpm > -600) {
-            msg = "Hard Landing Landing Gear Inspection Mandatory";
+            msg = "Hard Landing, Gear Inspection Mandatory";
             color = "orange-text";
         } else if(fpm <= -600) {
-            msg = "Very Hard Landing Inspection Mandatory";
+            msg = "Very Hard Landing, Inspection Mandatory";
             color = "red-text";
         }
         return [msg, color];

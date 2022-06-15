@@ -24,15 +24,17 @@ ingame-ui#FpmPanel #FpmPanelWrap {
 #fpmpanel {
     margin-left:var(--pageMargin);
     text-align:center;
-    border: 2px solid #333 !important;
-    border-radius: 5px;
-    background-color: var(--backgroundColorContrastedPanel);
+    /*border: 2px solid #333 !important;
+    border-radius: 5px;*/
+    /*background-color: var(--backgroundColorContrastedPanel);*/
     font-size: var(--fontSizeMedium);
+    font-weight:bold;
     padding: 10px 15px;
-    width: 40rem;
+    min-width: 40rem;
     /*height: 8rem;*/
     margin-top:8rem;
     flex-grow:0;
+    text-shadow: -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000, 2px 2px 0 #000;
 }
 
 .fpmgfdiv {
