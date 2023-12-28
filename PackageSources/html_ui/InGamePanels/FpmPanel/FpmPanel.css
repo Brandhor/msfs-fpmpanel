@@ -6,7 +6,7 @@ ingame-ui#FpmPanel {
     justify-content: center;
     height: 100% !important;
     /*width: 100% !important;*/
-    width: var(--fullPageWidth) !important;
+    /*width: var(--fullPageWidth) !important;*/
 
     background:0 0;
     border:0;
@@ -21,7 +21,7 @@ ingame-ui#FpmPanel #FpmPanelWrap {
     justify-content: center;
 }
 
-#fpmpanel {
+#fpmdiv {
     margin-left:var(--pageMargin);
     text-align:center;
     /*border: 2px solid #333 !important;

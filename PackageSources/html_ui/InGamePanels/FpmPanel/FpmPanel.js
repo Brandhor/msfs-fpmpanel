@@ -55,7 +55,16 @@ class IngamePanelFpmPanel extends TemplateElement {
 
         this.showing = true;
         
-        let div = document.getElementById("fpmpanel");
+        let div = document.getElementById("fpmdiv");
+        if(!div) {
+            return;
+        }
+        let fpmpanel = document.getElementById("FpmPanel");
+        if(g_externalVariables.vrMode) {
+            fpmpanel.style.width = "100% !important";
+        } else {
+            fpmpanel.style.width = "var(--fullPageWidth)";
+        }
         let fpmd = document.getElementById("fpmspan");
         let gfd = document.getElementById("gfspan");
         let textd = document.getElementById("textspan");
