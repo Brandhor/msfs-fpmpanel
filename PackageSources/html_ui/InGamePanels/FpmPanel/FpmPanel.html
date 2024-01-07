@@ -18,24 +18,21 @@
     <link rel="import" href="/templates/tabMenu/tabMenu.html" />
     <link rel="import" href="/templates/ingameUi/ingameUi.html" />
     <link rel="import" href="/templates/ingameUiHeader/ingameUiHeader.html" />
-    <link rel="import" href="/templates/NewListButton/NewListButton.html" />
-
-    <script type="text/javascript" src="FpmPanel.js"></script>
+    <link rel="import" href="/templates/NewListButton/NewListButton.html" />   
 </head>
 
 <body class="border-box">
     <ingamepanel-fpm>
-        <ingame-ui id="FpmPanel" panel-id="PANEL_FPM_PANEL" title="" content-fit="true" min-width="" min-height="" resize="none">
-            <div id="FpmPanelWrap">
-                <div id="fpmdiv" style="visibility: hidden">
-                    <div class="fpmgfdiv">
-                        <div><span id="fpmspan"></span> FPM</div>
-                        <div><span id="gfspan"></span> G<br/></div>
-                    </div>
-                    <span id="textspan"></span>
+        <ingame-ui id="FpmPanel" panel-id="PANEL_FPM_PANEL" class="ingameUiFrame panelInvisible hideui hidepanel" title="" content-fit="true" min-width="" min-height="" resize="none">
+            <div id="fpmdiv">
+                <div class="fpmgfdiv">
+                    <div><span id="fpmspan"></span> FPM</div>
+                    <div><span id="gfspan"></span> G<br/></div>
                 </div>
+                <span id="textspan"></span>
             </div>
         </ingame-ui>
     </ingamepanel-custom>
+    <script type="text/javascript" src="FpmPanel.js"></script>
 </body>
 </html>

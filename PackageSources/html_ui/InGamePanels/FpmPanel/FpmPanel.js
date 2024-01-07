@@ -5,6 +5,7 @@ class IngamePanelFpmPanel extends TemplateElement {
         this.showing = false;
         this.onground = true;
     }
+
     connectedCallback() {
         this._isConnected = true;
         //super.connectedCallback();        
@@ -15,6 +16,28 @@ class IngamePanelFpmPanel extends TemplateElement {
             requestAnimationFrame(update);
         };
         requestAnimationFrame(update);
+
+        document.addEventListener("keydown", function(ev) {
+            if(ev.altKey && ev.keyCode == KeyCode.KEY_F) {
+                that.toggleVisibility(true);
+            }
+        });
+    }
+
+    toggleVisibility(ui=false) {
+        this.showing = !this.showing;
+        let div = document.getElementById("FpmPanel");
+        if(!this.showing) {
+            div.classList.add("hidepanel");
+            if(ui) {
+                div.classList.add("hideui");
+            }
+        } else {
+            div.classList.remove("hidepanel");
+            if(ui) {
+                div.classList.remove("hideui");
+            }
+        }
     }
 
     getFpm() {
@@ -53,18 +76,14 @@ class IngamePanelFpmPanel extends TemplateElement {
             return;
         }
 
-        this.showing = true;
+        this.toggleVisibility();
         
-        let div = document.getElementById("fpmdiv");
-        if(!div) {
-            return;
-        }
-        let fpmpanel = document.getElementById("FpmPanel");
-        if(g_externalVariables.vrMode) {
+        //let fpmpanel = document.getElementById("FpmPanel");
+        /*if(g_externalVariables.vrMode) {
             fpmpanel.style.width = "100% !important";
         } else {
             fpmpanel.style.width = "var(--fullPageWidth)";
-        }
+        }*/
         let fpmd = document.getElementById("fpmspan");
         let gfd = document.getElementById("gfspan");
         let textd = document.getElementById("textspan");
@@ -77,12 +96,10 @@ class IngamePanelFpmPanel extends TemplateElement {
         textd.innerText = msg;
         textd.className = `blink-text font-small ${color}`;
 
-        div.style.visibility = "visible";
         let that = this;
 
         setTimeout(function() {
-            div.style.visibility = "hidden";
-            that.showing = false;
+            that.toggleVisibility();
         }, 5000);
     }
 

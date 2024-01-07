@@ -1,1 +1,1 @@
-"%MSFS_SDK%\Tools\bin\fspackagetool.exe" package.xml
+"%MSFS_SDK%\Tools\bin\fspackagetool.exe" package.xml -nopause
